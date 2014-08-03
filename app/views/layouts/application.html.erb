@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVernote</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="top-nav">
+		<h1><strong>AV</strong>ernote</h1>
+		<div id="top-menu">
+			<% if current_user %>
+				<a href="#">
+					<%= current_user.username %>
+				</a> |
+				<%= link_to "Home", root_path %> |
+				<a href="#">Users</a> |
+				<%= link_to "Logout", destroy_user_session_path, method: :delete, id: "btn_topbar" %>
+			<% else %>
+				<a href="#">Guest</a> |
+				<a href="#">Home</a> | 
+				<%= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) %>
+			<% end %>
+		</div>
+	</div>
+	
+	<div id="root-container">
+		<% if flash.any? %>
+			<div id="top-flash">
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+				<p class="success"><%= alert %></p>
+			</div>
+		<% end %>
+	
+		<%= yield %>
+	</div>
+
+	<footer>
+		<p>This is a footer</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div id="profile-info">
+	<% if current_user %>
+		<img id="profile_pic" src=<%= current_user.profile_pic %>>
+		<p id="profile_name"><%= current_user.username %></p>
+		<div id="new-post">
+			<%= form_for @post do |f| %>
+				<%= f.text_field :content, placeholder: 'Write a new post' %></br>
+				<%= f.text_field :link, placeholder: 'Share a link!' %></br>
+				<%= f.submit "Post", class: "btn btn-primary"%>
+			<% end %>
+		</div>
+	<% else %>
+		<p>請先登入以發表貼文</p>
+	<% end %>
+</div>
+
+<div id="UserList">
+
+</div>
+
+<div id="posts-container">
+	<ul id="post-casing">
+		<%= render partial: "shared/post", collection: @posts.order(:created_at).reverse_order %>
+	</ul>
+</div>

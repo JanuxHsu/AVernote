@@ -1,0 +1,63 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#profile-info {
+	margin-top: 10px;
+	height: 200px;
+	width: 300px;
+	background-color: white;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+#UserList {
+	margin-top: 20px;
+	width: 300px;
+	height: 500px;
+	background-color: green;
+}
+
+#posts-container{
+	position: relative;
+	left: 320px;
+	top: -722px;
+	height: 600px;
+	width: 680px;
+	background-color: white;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+}
+
+#profile_pic{
+	position: relative;
+	top: 20px;
+	left: 20px;
+	border:8px solid #DDD;
+	border-radius: 10px;
+}
+
+#profile_name{
+	position: relative;
+	top: -50px;
+	left: 90px;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+#new-post{
+	position: relative;
+	bottom: 23px;
+	height: 80px;
+	width: inherit;
+	background-color: rgb(75, 141, 249);
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+
+
+
+
+

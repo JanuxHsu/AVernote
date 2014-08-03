@@ -1,0 +1,12 @@
+<li class="post">
+	<div class="post-title">
+		<img src="" alt="">
+		<strong class="author-name"><%= post.user.username %></strong>
+	</div>
+	<div class="post-content">
+		<p><%= post.content %></p>
+		<%= content_tag :span, "Posted #{time_ago_in_words(post.created_at)} ago" %></br>
+		<p>Link: <%= post.link %></p>
+	</div>
+	<div class="iframe-faker"></div>
+</li>
